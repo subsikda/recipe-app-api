@@ -8,14 +8,10 @@ from django.db.utils import OperationalError
 
 
 class Command(BaseCommand):
-    """
-    Django command to wait for database.
-    """
+    """Django command to wait for database."""
 
     def handle(self, *args, **options):
-        """
-        Entry point for command.
-        """
+        """Entry point for command."""
         self.stdout.write("Waitng for database ...")
         db_up = False
         while db_up is False:
